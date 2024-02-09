@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Açai</title>
+</head>
+   
+<body>
+    <main class="meio">
+
+            <div class="total">
+                <h2>Total e Pagamentos</h2>
+            </div>
+        <div class="quadro">
+                   
+          <script type="text/javascript">
+            let desconto = 0;
+            const precoAcai = 15;
+            const precoTapioca = 10;
+
+            const qtdAcai = prompt('Digite a quantidade desejada de açai.');
+            const qtdTapioca = prompt('Digite a quantidade de tapioca.');
+
+            document.write("Quantidade Açai: " + qtdAcai + " <br />");
+            document.write("Quantidade tapioca: " + qtdTapioca + " <br />");
+
+            const total = (qtdAcai * precoAcai) + (qtdTapioca * precoTapioca);
+            const pgt = prompt('Digite S para pix e N para outra forma de pagamento.');
+
+            if (total >= 100){
+                desconto = 10;
+            }
+            else {
+                desconto = 5;
+            }            
+            
+            let totalComDesconto;
+            if (pgt.toUpperCase() === 'S') {
+                totalComDesconto = total - (total * (desconto / 100));
+            } else {
+                totalComDesconto = total - (total * (5 / 100)); 
+            }
+            
+            document.write("Valor total sem desconto: $" + total.toFixed(2) + "<br />");
+            document.write("Desconto aplicado: " + desconto +"%<br />");
+            document.write("Forma de pagamento: " + (pgt.toUpperCase() === 'S' ? 'PIX' : 'Outra forma') + "<br />");
+            document.write("Valor total com desconto: $" + totalComDesconto.toFixed(2) + "<br />");
+        </script>
+     </div>
+    </main>
+   
+</body>
+
+</html>

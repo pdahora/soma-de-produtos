@@ -1,0 +1,31 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.meio{
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: start;
+    justify-items: center;
+    background-color: rgb(9, 8, 7);
+    padding: 6rem;
+    font-size: 1.5rem;
+    height: 100vh;
+}
+.total > h2{
+    color: rgb(59, 239, 143);    
+}
+.quadro{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    max-width: 800px;
+    color: rgb(18, 240, 66);
+    background-color: #f7666b;
+    padding: 1rem;
+    font-size: 2rem;
+}
